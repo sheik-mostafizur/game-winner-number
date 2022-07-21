@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <style>
+      #playerOne ul,
+      #playerTwo ul,
+      #playerThree ul,
+      #history ul {
+        max-height: 60vh;
+        overflow-y: scroll;
+        scrollbar-width: thin;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="text-center border-bottom pb-3">Let's Play Game</h1>
+        </div>
+      </div>
+    </div>
+    <div class="container" id="setSetting">
+      <div class="row">
+        <div class="col-md-3 my-2">
+          <h5>Your Winner number is: <span class="fw-bold">0</span></h5>
+        </div>
+        <div class="col-md-6 my-2">
+          <div class="input-group mb-3">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Enter your winerr number"
+            />
+            <button
+              id="submit"
+              class="btn btn-primary text-white"
+              type="button"
+            >
+              Button
+            </button>
+          </div>
+        </div>
+        <div class="col-md-3 my-2">
+          <button id="reset" class="btn btn-danger">Reset</button>
+        </div>
+      </div>
+    </div>
+    <div class="container" id="checkmate">
+      <div class="row">
+        <div class="col-md-12">
+          <h3 class="text-center">Checkmate: <span>0</span></h3>
+        </div>
+      </div>
+    </div>
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-md-3 border shadow p-2" id="playerOne">
+          <h2 class="border-bottom">0</h2>
+          <button class="btn btn-primary border" disabled="disabled">
+            Player One
+          </button>
+          <ul class="list-group mt-3"></ul>
+        </div>
+        <div class="col-md-3 border shadow p-2" id="playerTwo">
+          <h2 class="border-bottom">0</h2>
+          <button class="btn btn-primary border" disabled="disabled">
+            Player Two
+          </button>
+          <ul class="list-group mt-3"></ul>
+        </div>
+        <div class="col-md-3 border shadow p-2" id="playerThree">
+          <h2 class="border-bottom">0</h2>
+          <button class="btn btn-primary border" disabled="disabled">
+            Player Three
+          </button>
+          <ul class="list-group mt-3"></ul>
+        </div>
+        <div class="col-md-3 border shadow p-2" id="history">
+          <h2 class="border-bottom">History</h2>
+          <ul class="list-group mt-3"></ul>
+        </div>
+      </div>
+    </div>
+    <script>
+      window.onload = function () {
+        const element = document.createElement("script");
+        element.src = "./app.js";
+        document.body.appendChild(element);
+      };
+    </script>
+  </body>
+</html>
